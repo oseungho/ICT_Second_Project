@@ -1,0 +1,162 @@
+@charset "UTF-8";
+/*@import "Common.css";*/
+
+/* nav쪽 css */
+.menu-bar{
+	height: 50px;
+	display: flex;
+}
+.menu-bar>li{
+	display: flex;
+    align-items: center; /* 세로 중앙 정렬 */
+    margin-right: 50px;
+}
+.menu-bar > li img{
+	padding-right: 0;
+    height: 20px; /* 이미지 높이 조절 */
+    /* 추가적인 스타일링을 위한 속성들 */
+}
+
+/* body쪽 css */
+body{
+	height: 100%;
+}
+.section_first{
+	/*
+	background: url("https://plus.unsplash.com/premium_photo-1664298147945-7682ce2aa53f?q=80&w=1429&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") no-repeat center fixed;
+    */
+	background: url("https://codeit-images.s3.ap-northeast-2.amazonaws.com/tutorials/2/Untitled%20%282%29.png") no-repeat center fixed;
+	background-size: cover;
+	height: 500px;
+	position: relative; z-index: 2;
+	margin-top: -6px;
+}
+
+.section_first::before{
+    content:"";
+    position: absolute; z-index: 0;
+    top:0; right: 0; bottom:0; left: 0;
+    background-color: rgba(0,0,0,.7);
+}
+
+.main-form .h1_first{
+	position: absolute;
+    font-size:6em; color: red;
+	width: 258px;
+	font-family: sans-serif;
+    text-align: left;
+	top: 120px;
+	left: 550px;
+	animation: slide1 1.5s ease-out;
+}
+.main-form .h1_second{
+	position: absolute;
+    font-size:6em; color:#fff;
+	width: 258px;
+	font-family: sans-serif;
+    text-align: left;
+	top: 210px;
+	left: 650px;
+	animation: slide2 2s ease-out;
+}
+
+.content-form{
+	height: 500px;
+}
+
+.section_second::before{
+	content:"";
+    position: absolute; z-index: 0;
+	height: 550px;
+    top:545px; right: 0; bottom: 0; left: 0;
+    background-color: rgba(0,0,0,.7);
+}
+
+
+.section_second div{
+	display: inline-block;
+}
+
+.content-left{
+	position: absolute;
+	height: 400px;
+	width: 40%;
+	border: 1px solid white;
+	margin: 50px;
+	left: 50px;
+	background-color: black;
+}
+
+.content-left table{
+	height:84%
+}
+
+
+.content-right{
+	position: absolute;
+	right: 50px;
+	height: 400px;
+	width: 40%;
+	border: 1px solid white;
+	margin: 50px;
+	background-color: black;
+}
+
+.section_second div h3{
+	color: white;
+	font-size: 17px;
+	margin: 20px;
+}
+
+@keyframes slide1{
+	from{
+		left:-100px;
+		opacity: 0; /* 투명도 */
+	}
+	to{
+		left: 550px;
+		opacity: 1;
+	}
+}
+
+@keyframes slide2{
+	from{
+		left:-100px;
+		opacity: 0;
+	}
+	to{
+		left: 650px;
+		opacity: 1;
+	}
+}
+
+@keyframes disappear1{
+	from{
+		left:550px;
+		opacity: 1;
+	}
+	to{
+		left:-100px;
+		opacity: 0;
+	}	
+}
+@keyframes disappear2{
+	from{
+		left:650px;
+		opacity: 1;
+	}
+	to{
+		left:-100px;
+		opacity: 0;
+	}	
+}
+
+
+.menu-bar h2{
+	padding: 20px;
+	font-size: 100px; color: #fff;
+}
+
+.fa-house-chimney:hover, i:hover{
+	color : red;
+}

@@ -1,0 +1,51 @@
+@charset "UTF-8";
+@import "Common.css";
+
+.main-form{
+	z-index: 2;
+	position: absolute; 
+	top:15px;
+	height:100%;
+}
+
+.main-area{
+	text-align: center;
+}
+.main-area>h1{
+	color: #fff;
+}
+
+form{
+	position: relative;
+	width: 100%;
+	justify-content: center;
+}
+table{
+	position: relative;
+	height: 70%;
+	top:1px;
+	bottom: 50px;
+}
+
+.paging{
+	width: 100%;
+	position: relative;
+	text-align: center;
+}
+
+.btn-area{
+	margin-top: 1px;
+	text-align: right;
+}
+.btn-area>button, .btn-area>a{
+	width: 100px;
+	height: 30px;
+	font-size: 16px;
+	border-radius: 15px;
+	background: rgb(255, 89, 0);
+	margin-bottom: 5px;
+}
+
+.btn-area button:hover{
+	padding-right: 10px;
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="retate.css">
+    <script src="retate.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <nav>
+            <div class="logo">
+                <h4>Crypto</h4>
+            </div>
+            <ul class="nav-links ">
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                
+            </ul> 
+            
+        </nav>
+    </div>
+    <a id="home"></a>
+    <main>
+        <div class="menu-btn">
+            <i class="fas fa-arrow-right"></i>
+        </div>
+        <div class="side-bar">
+            <div class="close-btn">
+                <i class="fas fa-times"></i>
+            </div>
+            <div class="menu">
+                    <div class="item">
+                        <a class="item-a sub-btn">First<i class="fas fa-angle-right dropdown"></i></a>
+                    <div class="sub-menu">
+                        <a class="item-a" id="les1" href=#><i class ="fa-regular fa-circle"></i>Lesson 1</a>
+                        <a class="item-a" id="les2" href=#><i class ="fa-regular fa-circle"></i>Lesson 2</a>
+                        <a class="item-a" id="les3" href=#><i class ="fa-regular fa-circle"></i>Lesson 3</a>
+                    </div>
+                </div>
+                    <div class="item">
+                        <a class="item-a sub-btn" >Second<i class="fas fa-angle-right dropdown"></i></a>
+                        <div class="sub-menu">
+                        <a class="item-a" id="les4" href=#><i class ="fa-regular fa-circle"></i>Second</a>
+                        <a class="item-a" id="les5" href=#><i class ="fa-regular fa-circle"></i>third</a>
+                        <a class="item-a" id="les6" href=#><i class ="fa-regular fa-circle"></i>fourth</a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <a class="item-a sub-btn">Third<i class="fas fa-angle-right dropdown"></i></a>
+                    <div class="sub-menu">
+                        <a class="item-a" id="les7" href=#><i class ="fa-regular fa-circle"></i>Second</a>
+                        <a class="item-a" id="les8" href=#><i class ="fa-regular fa-circle"></i>third</a>
+                        <a class="item-a" id="les9" href=#><i class ="fa-regular fa-circle"></i>fourth</a>
+                    </div>
+                    </div>
+                    <div class="item">
+                        <a class="item-a sub-btn">fourth<i class="fas fa-angle-right dropdown"></i></a>
+                    <div class="sub-menu">
+                        <a class="item-a" id="les10" href=#><i class ="fa-regular fa-circle"></i>Second</a>
+                        <a class="item-a" id="les11" href=#><i class ="fa-regular fa-circle"></i>third</a>
+                        <a class="item-a" id="les13" href=#><i class ="fa-regular fa-circle"></i>fourth</a>
+                    </div>
+                    </div>
+                    <div class="item">
+                        <a class="item-a sub-btn">Fifth<i class="fas fa-angle-right dropdown"></i></a>
+                    <div class="sub-menu">
+                        <a class="item-a" id="les14" href=#><i class ="fa-regular fa-circle"></i>Second</a>
+                        <a class="item-a" id="les15" href=#><i class ="fa-regular fa-circle"></i>third</a>
+                        <a class="item-a" id="les16" href=#><i class ="fa-regular fa-circle"></i>fourth</a>
+                    </div>
+        </div>
+                
+            </div>
+        </div>
+        
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('.sub-btn').click(function(){
+                    $(this).next('.sub-menu').slideToggle().siblings().slideDown();
+                    $(this).find('.dropdown').toggleClass('rotate');
+                });
+
+                $('.menu-btn').click(function(){
+                    $('.side-bar').removeClass('active');
+                    $('.menu-btn').css("visibility", "hidden");
+                });
+                $('.close-btn').click(function(){
+                    $('.side-bar').addClass('active');
+                    $('.menu-btn').css("visibility", "visible");
+                });
+            });
+           
+        </script>    
+    </main>   
+</body>
+</html>

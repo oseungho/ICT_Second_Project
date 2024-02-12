@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="https://kit.fontawesome.com/0b4621b427.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="../css/Writeform.css">
+    <style>
+        .fa-house-chimney:hover, i:hover{
+        	color : red;
+        }
+        .menu-bar{
+			height: 50px;
+			display: flex;
+		}
+		.menu-bar>li{
+			display: flex;
+		    align-items: center; /* 세로 중앙 정렬 */
+		    margin-right: 50px;
+		}
+		.menu-bar > li img{
+			padding-right: 0;
+		    height: 20px; /* 이미지 높이 조절 */
+		    /* 추가적인 스타일링을 위한 속성들 */
+		}
+        
+    </style>
+</head>
+<body>
+	<!-- 네비게이션 바  -->
+	<!--상단 고정-->
+	<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">   
+      <!--Brand / Logo 표시-->      
+      <a class="navbar-brand" href="#"><i class="fa-solid fa-house-chimney"></i></a>
+      <!-- Navbar text-->
+      <span class="navbar-text">
+      		${USER_ID}
+      </span>
+      
+      <!-- Toggler/collapsibe Button -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">   
+        <!-- Links -->
+        <ul class="navbar-nav mr-3"><!--mr-3은 Navbar text와의 여백용-->
+			<div class="menu-bar">
+				<li class="nav-item">
+					<img src="../images/pythonimg.png" alt="Python Image"><a class="nav-link" href="#" id="navmenu" name="python">PYTHON</a>
+				</li>
+				<li class="nav-item">
+					<img src="../images/htmlimg.png" alt="Html Image"><a class="nav-link" href="#" id="navmenu" name="html">HTML</a>
+				</li>
+				<li class="nav-item">
+					<img src="../images/cssimg.png" alt="Css Image"><a class="nav-link" href="#" id="navmenu" name="css">CSS</a>
+				</li>
+				<li class="nav-item">
+					<img src="../images/javaimg.png" alt="Java Image"><a class="nav-link" href="#" id="navmenu" name="java">JAVA</a>
+				</li>
+			</div>
+			<!--<c:if test="${USER_ID != null}">-->
+				<li class="nav-item">
+	            	<a class="nav-link" href='<c:url value="/loginout/loginform.jsp"/>'>로그아웃<i class='fas fa-sign-out-alt'></i></a>
+		        </li>
+	        <!--</c:if>-->
+          <!--Navbar With Dropdown-->
+          <!--하단고정일때는 dropdown을 dropup으로-->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">메뉴</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">내 정보 <i class="bi bi-info-circle"></i></a>
+              <!-- <a class="dropdown-item" href="MyPageform.jsp">내 정보 <i class="bi bi-info-circle"></i></a>-->
+              <a class="dropdown-item" href="#">자료실 <i class='far fa-folder-open'></i></a>
+              <a class="dropdown-item" href="#"> 게시판 <i class='fas fa-edit'></i></a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <form class="form-inline" action="#">
+              <input class="form-control mr-sm-2" type="text" placeholder="검색어 입력">
+              <button class="btn btn-success" type="submit">검색</button>
+            </form>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+	<div class="main-form" style="margin-top: 50px">
+		<div class="main-area">
+			<h1 class="top-h">
+				게시물 작성 페이지
+			</h1>
+			<form method="post" action="#">
+				<div class="int-area">
+					<label for="title" class="chk-la">제목</label> <input type="text"
+					class="" placeholder="제목을 입력하세요" name="title">
+				</div>
+				<div class="int-area second">
+					<label class="chk-la">페이지</label>
+					<select class="chk-select" name="grade">
+						<option value="">학력을 선택하세요</option>
+						<option value="PYTHON">PYTHON</option>
+						<option value="HTML">HTML</option>
+						<option value="CSS">CSS</option>
+						<option value="JAVA">JAVA</option>
+					</select>
+				</div>				
+				<div class="int-area">
+					<label for="content" class="textarea-la">내용</label>
+					<textarea class="text text-area" rows="10" name="content"></textarea>
+				</div>
+				<button type="submit" class="btn btn-primary">등록</button>
+			</form>
+		</div>
+	</div>
+</body>

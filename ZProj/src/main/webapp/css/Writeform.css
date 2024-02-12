@@ -1,0 +1,117 @@
+@charset "UTF-8";
+/*@import "Common.css";*/
+
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+    justify-content: center;
+    align-items:center;
+    height: 100vh;
+    background: url("https://media.fastcampus.co.kr/wp-content/uploads/2021/03/fastcampus-media-coding-img-1-1030x539.png") no-repeat center;
+    background-size: cover;
+}
+
+.main-form{
+	position: relative;
+	text-align: center;
+}
+
+.main-area{
+	width: 60%;
+	margin-top: 50px;
+	padding: 20px;
+	border:1px solid white;
+	text-align: center;
+	background-color: rgba(0,0,0,.85);;
+	display: inline-block;
+	border-radius: 5px;
+}
+
+.main-area h1{
+	color: white;
+}
+
+
+.int-area{
+	color: white;
+	text-align: center;
+	padding-bottom: 5px;
+	padding-left: 50px;
+}
+.int-area input{
+    width:70%;
+    padding: 20px 10px 10px;
+	margin-left: 40px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #999;
+    font-size: 18px; color: #fff;
+    outline: none;
+}
+.int-area label{
+    font-size: 18px; color: #FFF;
+}
+
+
+form div{
+	margin-bottom: 15px;
+}
+.second{
+	text-align: center;
+}
+.int-area .chk-select{
+	width: 70%;
+	margin-left: 20px;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    border-bottom: 1px solid #999;
+}
+.int-area .chk-select option{
+    color: black;
+}
+
+.int-area .titletext{
+	margin-left : 65px;
+}
+
+.int-area .text{
+    width:70%;
+    margin-left: 35px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #999;
+    font-size: 18px; color: #fff;
+    outline: none;
+}
+
+.int-area .text-area{
+    border: 2px solid #999;
+    width:70%;
+    position: relative;
+	background-color: white;
+	color: black;
+}
+
+.int-area .textarea-la{
+	position: relative;
+	top: -255px;
+}
+
+/*
+.btn-area{
+	margin-top: 1px;
+	text-align: right;
+}
+.btn-area>button, .btn-area>a{
+	width: 100px;
+	height: 30px;
+	font-size: 16px;
+	border-radius: 15px;
+	background: rgb(255, 89, 0);
+	margin-bottom: 5px;
+}
+
+.btn-area button:hover{
+	padding-right: 10px;
+}
+*/

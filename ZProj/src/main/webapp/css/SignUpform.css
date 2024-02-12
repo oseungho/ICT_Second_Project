@@ -1,0 +1,68 @@
+@charset "UTF-8";
+@import "Common.css";
+
+.sign-up-form{position: relative; z-index: 2;}
+
+.sign-up-form h1{
+   font-size:32px; color:#fff;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.int-area{
+    width:500px; position: relative;
+    margin-top:20px;
+    /*border: 1px solid red;*/
+}
+
+.int-area label{
+	position: absolute;
+	left: 10px;    
+	font-size: 18px; color: #FFF;
+    transition: top .5s ease;
+}
+
+.int-area .text{
+    width:70%;
+    margin-left: 150px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #999;
+    font-size: 18px; color: #fff;
+    outline: none;
+}
+
+.int-area .chk-div{
+	/*border: 2px solid blue;*/
+}
+.chk-div .chk-la{
+	border-bottom: 1px solid #999;
+    font-size: 15px; color: #fff;
+    margin-left: 140px;
+    position: relative;
+}
+
+.chk-div .chk-in{       
+    margin-left: 10px;
+}
+
+.int-area .chk-select{
+    margin-left: 150px;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    border-bottom: 1px solid #999;
+}
+.int-area .chk-select option{
+    color: black;
+}
+
+.int-area .text-area{
+    border: 2px solid #999;
+    width:70%; position: relative;
+    position: relative;
+}
+
+.int-area .chk-dtn{
+	align-items: center;
+}

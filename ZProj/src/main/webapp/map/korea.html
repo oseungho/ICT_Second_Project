@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8" />
+        <title>koreaMap</title>
+        <link rel="stylesheet" href="korea.css" />
+    </head>
+    <script type="text/javascript" src="d3.js"></script>
+    <script type="text/javascript" src="korea.js"></script>
+    <body>
+        <div id="container"></div>
+    </body>
+</html>
+<script>
+    // JavaScript를 사용하여 JSON 파일 로드하기
+    fetch('korea.json')
+        .then(response => response.json())
+        .then(data => {
+            // 로드된 데이터를 처리하는 코드 작성
+            console.log(data);
+        })
+        .catch(error => {
+            // 에러 처리
+            console.error('파일 로드 중 오류 발생:', error);
+        });
+</script>
